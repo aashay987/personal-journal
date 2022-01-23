@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>BLOG WORLD</title>
+</head>
+
+<body>
+  <%- include('header'); -%>
+
+  <div class="container">
+    <div class="row">
+
+      <% for (var i=0; i <posts.length; i++ ){%>
+      <div class="col-md-4 unit">
+        <div class="data">
+          <div class="header">
+            <h3><%=posts[i].title%></h3>
+          </div>
+          <div class="post">
+            <p><%=posts[i].blog%>...<a href="/post/<%=titles[i]%>">Read more</a></p>
+               </div>
+             </div>
+          </div>
+        <% } %>
+          </div>
+        </div>
+        <%- include('footer'); -%>
+</body>
+
+</html>
